@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ostad Rezaul Karim | Top 1% Red Teamer & Offensive Cybersecurity Expert</title>
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Ostad Rezaul Karim | Top 1% Red Teamer & Cybersecurity Expert" />
+  <meta name="description" content="Official portfolio and tactical dossier of Ostad Rezaul Karim, Top 1% Red Teamer, Ethical Hacker, App & Web Developer, and Founder of Ostad Red Team Forge." />
+  <meta name="keywords" content="Ostad Rezaul Karim, Ostad Red Team Forge, Red Teamer, Cybersecurity Expert, Ethical Hacker, Penetration Tester, Exploit Developer, ostadrezaulkarim.com" />
+  <meta name="author" content="Ostad Rezaul Karim" />
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ostadrezaulkarim.com/" />
+  <meta property="og:title" content="Ostad Rezaul Karim | Top 1% Red Teamer" />
+  <meta property="og:description" content="Elite adversary simulation, offensive cybersecurity, exploit development, and secure software engineering." />
+  <meta property="og:image" content="assets/ostad_badge.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Ostad Rezaul Karim | Top 1% Red Teamer" />
+  <meta property="twitter:description" content="Founder of Ostad Red Team Forge. Top 1% Offensive Security Specialist." />
+  <meta property="twitter:image" content="assets/ostad_badge.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/ostad_badge.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;0,800;1,400&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="cyber-theme">
+  <!-- Matrix / Particle Canvas Background -->
+  <canvas id="cyber-canvas"></canvas>
+  <div class="scanlines"></div>
+  <div class="vignette"></div>
+
+  <!-- Top Announcement Bar / Terminal Ticker -->
+  <div class="top-status-bar">
+    <div class="status-left">
+      <span class="live-dot pulse-red"></span>
+      <span class="status-label">TACTICAL STATUS:</span>
+      <span class="status-val">THREAT INTEL READY</span>
+      <span class="separator">|</span>
+      <span class="status-label">DOMAIN:</span>
+      <span class="status-val glow-red">ostadrezaulkarim.com</span>
+    </div>
+    <div class="status-right">
+      <span class="status-label">FORGE GUILD:</span>
+      <span class="status-val">OSTAD RED TEAM FORGE</span>
+      <span class="separator">|</span>
+      <a href="curriculum.html" class="status-val glow-red" style="text-decoration:none;"><i class="fa-solid fa-graduation-cap"></i> MASTERCLASS SYLLABUS</a>
+      <span class="separator">|</span>
+      <span id="system-clock">00:00:00 UTC</span>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo">
+        <span class="brand-icon"><i class="fa-solid fa-shield-halved"></i></span>
+        <div class="brand-text">
+          <span class="primary-brand">OSTAD REZAUL KARIM</span>
+          <span class="sub-brand">RED TEAM FORGE</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#hero" class="nav-link active"><i class="fa-solid fa-crosshairs"></i> Command</a>
+        <a href="#about" class="nav-link"><i class="fa-solid fa-user-secret"></i> Dossier</a>
+        <a href="#forge" class="nav-link"><i class="fa-solid fa-fire-burner"></i> Forge</a>
+        <a href="curriculum.html" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Masterclass</a>
+        <a href="#capabilities" class="nav-link"><i class="fa-solid fa-microchip"></i> Capabilities</a>
+        <a href="#terminal" class="nav-link"><i class="fa-solid fa-terminal"></i> Console</a>
+        <a href="#arsenal" class="nav-link"><i class="fa-solid fa-toolbox"></i> Arsenal</a>
+        <a href="#missions" class="nav-link"><i class="fa-solid fa-shield-virus"></i> Ops</a>
+        <a href="#contact" class="nav-link nav-cta"><i class="fa-solid fa-satellite-dish"></i> Engage</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="sfx-toggle" class="btn-icon" title="Toggle Tactical Audio (SFX)">
+          <i class="fa-solid fa-volume-high" id="sfx-icon"></i>
+        </button>
+        <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-grid">
+        <!-- Hero Left: Tactical Bio & CTAs -->
+        <div class="hero-content">
+          <div class="cyber-badge-wrapper">
+            <span class="cyber-badge glow-border">
+              <i class="fa-solid fa-skull"></i> TOP 1% OFFENSIVE CYBERSECURITY OPERATOR
+            </span>
+          </div>
+
+          <h1 class="hero-name">
+            <span class="glitch" data-text="OSTAD REZAUL KARIM">OSTAD REZAUL KARIM</span>
+          </h1>
+
+          <h2 class="hero-title">
+            FOUNDER & LEAD OPERATOR // <span class="text-crimson">OSTAD RED TEAM FORGE</span>
+          </h2>
+
+          <div class="typewriter-box">
+            <span class="prompt-sym">&gt;</span>
+            <span id="typewriter-text" class="typewriter"></span>
+            <span class="cursor">█</span>
+          </div>
+
+          <p class="hero-desc">
+            Specializing in high-stakes adversary simulation, deep-tier penetration testing, zero-day research, EDR evasion, and impenetrable software architecture. We emulate the world's most sophisticated threat actors to forge unbreakable digital fortresses.
+          </p>
+
+          <!-- Tactical HUD Metrics -->
+          <div class="hud-metrics">
+            <div class="metric-card">
+              <span class="metric-val" data-target="1">Top 1%</span>
+              <span class="metric-sub">Global Red Team Tier</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-val" data-target="500">500+</span>
+              <span class="metric-sub">Vulnerabilities Discovered</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-val" data-target="100">100%</span>
+              <span class="metric-sub">Engagement Success Rate</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-val">24/7</span>
+              <span class="metric-sub">Tactical Readiness</span>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="hero-ctas">
+            <a href="curriculum.html" class="btn btn-primary" style="background: linear-gradient(135deg, #00b0ff, #0056b3); box-shadow: 0 0 20px rgba(0, 176, 255, 0.4);">
+              <i class="fa-solid fa-graduation-cap"></i> 19-MODULE MASTERCLASS
+            </a>
+            <a href="#contact" class="btn btn-primary">
+              <i class="fa-solid fa-radiation"></i> INITIATE ENGAGEMENT
+            </a>
+            <a href="#terminal" class="btn btn-secondary">
+              <i class="fa-solid fa-terminal"></i> LAUNCH CONSOLE
+            </a>
+            <a href="https://github.com/abdulmannanshekh/OstadRezaulKarim" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              <i class="fa-brands fa-github"></i> GITHUB REPO
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Right: Official Emblem Badge with Cyber Frame -->
+        <div class="hero-visual">
+          <div class="badge-holo-container">
+            <div class="cyber-ring ring-outer"></div>
+            <div class="cyber-ring ring-inner"></div>
+            <div class="hud-bracket bracket-tl"></div>
+            <div class="hud-bracket bracket-tr"></div>
+            <div class="hud-bracket bracket-bl"></div>
+            <div class="hud-bracket bracket-br"></div>
+
+            <div class="badge-card">
+              <img src="assets/ostad_badge.jpg" alt="Ostad Rezaul Karim Official Red Team Emblem" class="badge-img" />
+              <div class="badge-scanner-line"></div>
+            </div>
+
+            <div class="badge-caption">
+              <span class="caption-tag"><i class="fa-solid fa-certificate text-crimson"></i> VERIFIED OPERATOR DOSSIER</span>
+              <span class="caption-id">ID: ORK-RTF-001</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: OPERATOR DOSSIER (ABOUT) -->
+    <section id="about" class="section-container">
+      <div class="section-header">
+        <span class="section-tag">[ OPERATOR_CLASSIFIED_DOSSIER ]</span>
+        <h2 class="section-title">ABOUT OSTAD REZAUL KARIM</h2>
+        <div class="section-divider"><span class="divider-diamond"></span></div>
+        <p class="section-subtitle">
+          Bridging elite offensive capability with defense engineering, full-stack application development, and enterprise IT supremacy.
+        </p>
+      </div>
+
+      <div class="dossier-grid">
+        <div class="dossier-card tactical-border">
+          <div class="dossier-header">
+            <i class="fa-solid fa-id-card-clip text-crimson"></i>
+            <h3>SECURITY CLEARANCE & IDENTITY</h3>
+          </div>
+          <table class="dossier-table">
+            <tr>
+              <td class="key">Callsign:</td>
+              <td class="val glow-red">Ostad Rezaul Karim</td>
+            </tr>
+            <tr>
+              <td class="key">Operative Role:</td>
+              <td class="val">Red Team Lead & Principal Security Architect</td>
+            </tr>
+            <tr>
+              <td class="key">Affiliation:</td>
+              <td class="val">Ostad Red Team Forge (Founder)</td>
+            </tr>
+            <tr>
+              <td class="key">Global Ranking:</td>
+              <td class="val"><span class="pill-red">Top 1% Red Teamer</span></td>
+            </tr>
+            <tr>
+              <td class="key">Specializations:</td>
+              <td class="val">Adversary Simulation, Exploit Engineering, Full-Stack Dev</td>
+            </tr>
+            <tr>
+              <td class="key">Operational Status:</td>
+              <td class="val"><span class="status-live">● ACTIVE FOR DEPLOYMENT</span></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="dossier-card tactical-border">
+          <div class="dossier-header">
+            <i class="fa-solid fa-crosshairs text-crimson"></i>
+            <h3>OFFENSIVE PHILOSOPHY</h3>
+          </div>
+          <blockquote class="cyber-quote">
+            "True cyber resilience is never proven in theoretical compliance checklists. It is forged in the fires of realistic, relentless, and sophisticated adversary emulation. To defend the perimeter, one must master the art of dismantling it."
+          </blockquote>
+          <p class="dossier-text">
+            With deep expertise spanning ethical hacking, kernel-level attack vectors, secure software engineering, and mission-critical IT infrastructure, Ostad Rezaul Karim provides organizations with unparalleled tactical visibility into their critical vulnerabilities before malicious threat actors exploit them.
+          </p>
+          <div class="spec-pills">
+            <span class="pill">MITRE ATT&CK Mapping</span>
+            <span class="pill">C2 Infrastructure</span>
+            <span class="pill">Kernel Exploitation</span>
+            <span class="pill">Full-Stack Engineering</span>
+            <span class="pill">Active Directory Dominance</span>
+            <span class="pill">Zero-Day Discovery</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: THE FORGE (OSTAD RED TEAM FORGE) -->
+    <section id="forge" class="section-container forge-bg">
+      <div class="section-header">
+        <span class="section-tag">[ SYNDICATE_HEADQUARTERS ]</span>
+        <h2 class="section-title">OSTAD RED TEAM FORGE</h2>
+        <div class="section-divider"><span class="divider-diamond"></span></div>
+        <p class="section-subtitle">
+          An elite offensive security collective dedicated to breaking boundaries, mastering adversary tradecraft, and forging unbreachable digital architecture.
+        </p>
+      </div>
+
+      <div class="forge-grid">
+        <div class="forge-pillar">
+          <div class="pillar-icon"><i class="fa-solid fa-fire"></i></div>
+          <h3>ADVERSARY EMULATION</h3>
+          <p>
+            Replicating Nation-State (APT) tactics, techniques, and procedures (TTPs) across perimeter, wireless, cloud, and on-premises enterprise environments.
+          </p>
+          <ul class="pillar-list">
+            <li><i class="fa-solid fa-angle-right"></i> Stealth Initial Access & Phishing Campaigns</li>
+            <li><i class="fa-solid fa-angle-right"></i> Advanced EDR / SIEM Detection Bypass</li>
+            <li><i class="fa-solid fa-angle-right"></i> Complex Lateral Movement Strategies</li>
+          </ul>
+        </div>
+
+        <div class="forge-pillar active-pillar">
+          <div class="pillar-icon"><i class="fa-solid fa-shield-virus"></i></div>
+          <h3>EXPLOIT FORGE & TOOLING</h3>
+          <p>
+            Crafting custom offensive payloads, bespoke C2 stagers, and zero-detection automation frameworks tailored for high-security environments.
+          </p>
+          <ul class="pillar-list">
+            <li><i class="fa-solid fa-angle-right"></i> In-Memory Execution & AMSI Bypass</li>
+            <li><i class="fa-solid fa-angle-right"></i> Proprietary Payload Obfuscation Engines</li>
+            <li><i class="fa-solid fa-angle-right"></i> Cloud & Container Exploitation Frameworks</li>
+          </ul>
+        </div>
+
+        <div class="forge-pillar">
+          <div class="pillar-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>SECURE APPLICATION FORGE</h3>
+          <p>
+            Building battle-hardened modern web and mobile applications with defense-in-depth principles baked into every layer of source code.
+          </p>
+          <ul class="pillar-list">
+            <li><i class="fa-solid fa-angle-right"></i> Full-Stack App & API Architecture</li>
+            <li><i class="fa-solid fa-angle-right"></i> DevSecOps & Automated Code Audits</li>
+            <li><i class="fa-solid fa-angle-right"></i> Cryptographic Key Management & Zero Trust</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- MASTERCLASS SPOTLIGHT BANNER -->
+      <div class="tactical-border" style="margin-top: 50px; padding: 35px; background: linear-gradient(135deg, rgba(20, 24, 36, 0.95), rgba(12, 14, 20, 0.98)); border-left: 4px solid #00b0ff;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 25px;">
+          <div style="max-width: 820px;">
+            <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 176, 255, 0.15); border: 1px solid #00b0ff; color: #00d2ff; padding: 4px 12px; border-radius: 4px; font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; margin-bottom: 12px;">
+              <i class="fa-solid fa-fire"></i> FEATURED TRAINING PROGRAM &bull; 2026 EDITION
+            </div>
+            <h3 style="font-family: var(--font-cyber); font-size: 1.6rem; color: #fff; margin-bottom: 10px;">
+              RED TEAM MASTERCLASS CURRICULUM
+            </h3>
+            <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; margin-bottom: 14px;">
+              বাংলায় প্রথম ও সম্পূর্ণ জিরো থেকে এন্টারপ্রাইজ লেভেল অ্যাডভান্সড অফেন্সিভ সাইবার সিকিউরিটি গাইড। EDR/XDR বাইপাস, অ্যাডভান্সড মেমোরি ইনজেকশন, অ্যাক্টিভ ডিরেক্টরি ডমিন্যান্স, ক্লাউড হাইজ্যাক এবং কাস্টম C2 ডেভেলপমেন্ট সহ মোট ১৯টি সম্পূর্ণ মডিউল।
+            </p>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-dim);">
+              <span><i class="fa-solid fa-check text-crimson"></i> ১৯টি পূর্ণাঙ্গ মডিউল</span>
+              <span><i class="fa-solid fa-check text-crimson"></i> CRTO / CRTE / OSCP ম্যাপিং</span>
+              <span><i class="fa-solid fa-check text-crimson"></i> ১০০% প্র্যাকটিক্যাল ল্যাব</span>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="curriculum.html" class="btn btn-primary" style="background: linear-gradient(135deg, #00b0ff, #0056b3); box-shadow: 0 0 20px rgba(0, 176, 255, 0.4); text-align: center;">
+              <i class="fa-solid fa-book-open"></i> সম্পূর্ণ কারিকুলাম দেখুন
+            </a>
+            <a href="assets/Ostad_Red_Team_Forge_Masterclass_Curriculum.docx" download class="btn btn-secondary" style="font-size: 0.85rem; padding: 10px 18px; text-align: center;">
+              <i class="fa-solid fa-file-word"></i> DOCX ফাইল ডাউনলোড
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: CAPABILITIES / SKILL MATRIX -->
+    <section id="capabilities" class="section-container">
+      <div class="section-header">
+        <span class="section-tag">[ TACTICAL_PROFICIENCIES ]</span>
+        <h2 class="section-title">CORE CAPABILITIES & SKILL MATRIX</h2>
+        <div class="section-divider"><span class="divider-diamond"></span></div>
+        <p class="section-subtitle">
+          Comprehensive offensive and software engineering proficiencies calibrated for high-impact results.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Skill 1 -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-icon"><i class="fa-solid fa-network-wired"></i></div>
+            <div class="skill-meta">
+              <h4>Red Teaming & Adversary Simulation</h4>
+              <span class="skill-level">MASTERY LEVEL: 99%</span>
+            </div>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" style="width: 99%;"></div>
+          </div>
+          <p class="skill-desc">
+            Full-scope attack simulations spanning Active Directory forests, Kerberos attacks (Roasting, Delegation), stealth C2 deployment, and living-off-the-land techniques.
+          </p>
+        </div>
+
+        <!-- Skill 2 -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-icon"><i class="fa-solid fa-bug"></i></div>
+            <div class="skill-meta">
+              <h4>Penetration Testing & Web Exploits</h4>
+              <span class="skill-level">MASTERY LEVEL: 98%</span>
+            </div>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" style="width: 98%;"></div>
+          </div>
+          <p class="skill-desc">
+            OWASP Top 10 mastery, SSRF, SQLi, IDOR, deserialization vulnerabilities, business logic bypasses, GraphQL, and microservice penetration testing.
+          </p>
+        </div>
+
+        <!-- Skill 3 -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <div class="skill-meta">
+              <h4>Full-Stack App & Web Development</h4>
+              <span class="skill-level">MASTERY LEVEL: 95%</span>
+            </div>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" style="width: 95%;"></div>
+          </div>
+          <p class="skill-desc">
+            High-performance web apps, responsive frontend architectures, RESTful & GraphQL backend services, real-time socket interfaces, and cloud native scaling.
+          </p>
+        </div>
+
+        <!-- Skill 4 -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-icon"><i class="fa-solid fa-gears"></i></div>
+            <div class="skill-meta">
+              <h4>Exploit Development & Reverse Engineering</h4>
+              <span class="skill-level">MASTERY LEVEL: 94%</span>
+            </div>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" style="width: 94%;"></div>
+          </div>
+          <p class="skill-desc">
+            Binary analysis, x86/x64 assembly, Ghidra, memory corruption, return-oriented programming (ROP), and custom payload compilation in C/C++ and Go.
+          </p>
+        </div>
+
+        <!-- Skill 5 -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-icon"><i class="fa-solid fa-cloud"></i></div>
+            <div class="skill-meta">
+              <h4>Cloud & Container Security</h4>
+              <span class="skill-level">MASTERY LEVEL: 93%</span>
+            </div>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" style="width: 93%;"></div>
+          </div>
+          <p class="skill-desc">
+            AWS / Azure IAM privilege escalation, Kubernetes cluster breakouts, Docker container escapes, CI/CD pipeline poisonings, and serverless hardening.
+          </p>
+        </div>
+
+        <!-- Skill 6 -->
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-icon"><i class="fa-solid fa-server"></i></div>
+            <div class="skill-meta">
+              <h4>IT Infrastructure & Threat Intelligence</h4>
+              <span class="skill-level">MASTERY LEVEL: 96%</span>
+            </div>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" style="width: 96%;"></div>
+          </div>
+          <p class="skill-desc">
+            Linux & Windows enterprise administration, firewall/IDS/IPS evasion analysis, SIEM/SOC rule tuning, packet inspection, and threat hunting methodologies.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: INTERACTIVE CYBER TERMINAL -->
+    <section id="terminal" class="section-container">
+      <div class="section-header">
+        <span class="section-tag">[ INTERACTIVE_COMMAND_LINE ]</span>
+        <h2 class="section-title">TACTICAL CYBER CONSOLE</h2>
+        <div class="section-divider"><span class="divider-diamond"></span></div>
+        <p class="section-subtitle">
+          Interact directly with the simulation terminal. Type <span class="text-crimson">`help`</span> to inspect available operative commands.
+        </p>
+      </div>
+
+      <div class="terminal-wrapper tactical-border">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <div class="terminal-title">
+            <i class="fa-solid fa-terminal"></i> root@ostad-red-team-forge:~# (ostadrezaulkarim.com)
+          </div>
+          <div class="terminal-controls">
+            <button id="clear-term-btn" class="term-btn" title="Clear Console">CLEAR</button>
+          </div>
+        </div>
+
+        <div class="terminal-body" id="terminal-output">
+          <div class="term-line banner-line">
+========================================================================
+   ____  ____ _____ ___    ____     ____  __________  __  ______  __  __
+  / __ \/ ___/_  //   |  / __ \   / __ \/ ____/ __ \/_/ /_  __/ / / / /
+ / / / /\__ \ / // /| | / / / /  / /_/ / __/ / / / / / /  / /   / /_/ / 
+/ /_/ /___/ // // ___ |/ /_/ /  / _, _/ /___/ /_/ / / /  / /   / __  /  
+\____//____/___/_/  |_/_____/  /_/ |_/_____/_____/_/_/  /_/   /_/ /_/   
+========================================================================
+[+] SYSTEM INITIALIZED // OSTAD RED TEAM FORGE v4.2.0
+[+] OPERATOR: OSTAD REZAUL KARIM [TOP 1% RED TEAMER]
+[+] TARGET DOMAIN: ostadrezaulkarim.com
+[+] Type 'help' to view available tactical commands.
+          </div>
+        </div>
+
+        <div class="terminal-input-row">
+          <span class="term-prompt">operator@forge:~$</span>
+          <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" placeholder="type 'help' or command..." />
+          <button id="term-exec-btn" class="term-exec-btn"><i class="fa-solid fa-play"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: WEAPONS & ARSENAL (TECH STACK) -->
+    <section id="arsenal" class="section-container">
+      <div class="section-header">
+        <span class="section-tag">[ OPERATIONAL_TOOLKIT ]</span>
+        <h2 class="section-title">THE ARSENAL</h2>
+        <div class="section-divider"><span class="divider-diamond"></span></div>
+        <p class="section-subtitle">
+          Industry-standard and proprietary tools deployed during covert operations and development cycles.
+        </p>
+      </div>
+
+      <div class="arsenal-categories">
+        <!-- Category 1 -->
+        <div class="arsenal-box">
+          <h3 class="arsenal-box-title"><i class="fa-solid fa-crosshairs text-crimson"></i> OFFENSIVE & RED TEAM</h3>
+          <div class="tools-tags">
+            <span class="tool-tag"><i class="fa-solid fa-skull"></i> Kali Linux</span>
+            <span class="tool-tag"><i class="fa-solid fa-shield-halved"></i> Cobalt Strike</span>
+            <span class="tool-tag"><i class="fa-solid fa-bolt"></i> Metasploit Pro</span>
+            <span class="tool-tag"><i class="fa-solid fa-spider"></i> Burp Suite Professional</span>
+            <span class="tool-tag"><i class="fa-solid fa-diagram-project"></i> BloodHound & SharpHound</span>
+            <span class="tool-tag"><i class="fa-solid fa-key"></i> Mimikatz & Impacket</span>
+            <span class="tool-tag"><i class="fa-solid fa-lock-open"></i> CrackMapExec / NetExec</span>
+            <span class="tool-tag"><i class="fa-solid fa-satellite"></i> Nmap & Masscan</span>
+            <span class="tool-tag"><i class="fa-solid fa-dna"></i> Ghidra & IDA Pro</span>
+            <span class="tool-tag"><i class="fa-solid fa-network-wired"></i> Wireshark</span>
+          </div>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="arsenal-box">
+          <h3 class="arsenal-box-title"><i class="fa-solid fa-code text-crimson"></i> DEVELOPMENT & SCRIPTING</h3>
+          <div class="tools-tags">
+            <span class="tool-tag"><i class="fa-brands fa-python"></i> Python (Exploits & Automation)</span>
+            <span class="tool-tag"><i class="fa-brands fa-golang"></i> Go (Stealth Implants & Binaries)</span>
+            <span class="tool-tag"><i class="fa-solid fa-c"></i> C / C++ (Memory Corruption)</span>
+            <span class="tool-tag"><i class="fa-solid fa-terminal"></i> Bash & PowerShell scripting</span>
+            <span class="tool-tag"><i class="fa-brands fa-js"></i> JavaScript & TypeScript</span>
+            <span class="tool-tag"><i class="fa-brands fa-node"></i> Node.js & Express</span>
+            <span class="tool-tag"><i class="fa-brands fa-react"></i> Modern Web Frontend</span>
+            <span class="tool-tag"><i class="fa-solid fa-database"></i> SQL, PostgreSQL & NoSQL</span>
+          </div>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="arsenal-box">
+          <h3 class="arsenal-box-title"><i class="fa-solid fa-cloud-arrow-up text-crimson"></i> INFRASTRUCTURE & CLOUD</h3>
+          <div class="tools-tags">
+            <span class="tool-tag"><i class="fa-brands fa-docker"></i> Docker & Microservices</span>
+            <span class="tool-tag"><i class="fa-solid fa-cubes"></i> Kubernetes</span>
+            <span class="tool-tag"><i class="fa-brands fa-aws"></i> AWS Cloud Security</span>
+            <span class="tool-tag"><i class="fa-brands fa-microsoft"></i> Azure Active Directory</span>
+            <span class="tool-tag"><i class="fa-brands fa-linux"></i> Linux Hardened Kernels</span>
+            <span class="tool-tag"><i class="fa-brands fa-git-alt"></i> Git & DevSecOps CI/CD</span>
+            <span class="tool-tag"><i class="fa-solid fa-shield"></i> Cloudflare WAF & DNS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: MISSION CASE STUDIES -->
+    <section id="missions" class="section-container">
+      <div class="section-header">
+        <span class="section-tag">[ OPERATIONAL_CASE_STUDIES ]</span>
+        <h2 class="section-title">TACTICAL MISSIONS & SIMULATIONS</h2>
+        <div class="section-divider"><span class="divider-diamond"></span></div>
+        <p class="section-subtitle">
+          Representative scenarios demonstrating stealth penetration and resilience engineering.
+        </p>
+      </div>
+
+      <div class="missions-grid">
+        <!-- Mission 1 -->
+        <div class="mission-card tactical-border">
+          <div class="mission-status-strip strip-red">MISSION: COMPROMISE_SIMULATION</div>
+          <div class="mission-content">
+            <span class="mission-code">OP-NIGHTSHADE-01</span>
+            <h3>Enterprise Active Directory Forest Takeover</h3>
+            <p>
+              Initiated black-box breach simulation against a multi-domain corporate infrastructure. Leveraged spear-phishing payload with AMSI bypass, gained initial foothold, dumped LSASS stealthily, and attained Domain Admin credentials in under 36 hours.
+            </p>
+            <div class="mission-tags">
+              <span>Kerberoasting</span>
+              <span>BloodHound</span>
+              <span>Domain Admin</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mission 2 -->
+        <div class="mission-card tactical-border">
+          <div class="mission-status-strip strip-crimson">MISSION: DEFENSE_EVASION</div>
+          <div class="mission-content">
+            <span class="mission-code">OP-SILENT-ECHO</span>
+            <h3>Next-Gen EDR Bypass & Memory Injection</h3>
+            <p>
+              Engineered a custom reflective DLL loader in C++ utilizing direct system calls (Syswhispers3) and API unhooking to inject encrypted shellcode into benign system processes, maintaining persistent C2 with zero heuristic detections.
+            </p>
+            <div class="mission-tags">
+              <span>Syscalls</span>
+              <span>DLL Sideloading</span>
+              <span>EDR Evasion</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mission 3 -->
+        <div class="mission-card tactical-border">
+          <div class="mission-status-strip strip-red">MISSION: FULL_STACK_SECURITY</div>
+          <div class="mission-content">
+            <span class="mission-code">OP-SECURE-FORGE</span>
+            <h3>Zero-Trust Enterprise Portal Hardening</h3>
+            <p>
+              Audited and re-architected a vulnerable enterprise web application. Remediated critical SSRF, Broken Object Level Authorization (BOLA), and implemented strict cryptographic validation and automated CI/CD security gating.
+            </p>
+            <div class="mission-tags">
+              <span>OWASP Top 10</span>
+              <span>Zero-Trust</span>
+              <span>DevSecOps</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: CONTACT / SECURE COMMS -->
+    <section id="contact" class="section-container">
+      <div class="section-header">
+        <span class="section-tag">[ ENCRYPTED_TRANSMISSION ]</span>
+        <h2 class="section-title">INITIATE ENGAGEMENT</h2>
+        <div class="section-divider"><span class="divider-diamond"></span></div>
+        <p class="section-subtitle">
+          Ready to test your defenses, build elite web applications, or collaborate with Ostad Red Team Forge? Transmit your signal below.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left: Operator Comms Channels -->
+        <div class="contact-channels tactical-border">
+          <h3 class="channels-title"><i class="fa-solid fa-satellite-dish text-crimson"></i> VERIFIED CHANNELS</h3>
+          
+          <div class="channel-item">
+            <div class="channel-icon"><i class="fa-solid fa-globe"></i></div>
+            <div class="channel-info">
+              <span class="channel-label">Official Custom Domain</span>
+              <a href="https://ostadrezaulkarim.com" class="channel-link glow-red" target="_blank">ostadrezaulkarim.com</a>
+            </div>
+          </div>
+
+          <div class="channel-item">
+            <div class="channel-icon"><i class="fa-brands fa-github"></i></div>
+            <div class="channel-info">
+              <span class="channel-label">Official GitHub Repository</span>
+              <a href="https://github.com/abdulmannanshekh/OstadRezaulKarim" class="channel-link" target="_blank" rel="noopener noreferrer">
+                github.com/abdulmannanshekh/OstadRezaulKarim
+              </a>
+            </div>
+          </div>
+
+          <div class="channel-item">
+            <div class="channel-icon"><i class="fa-solid fa-shield-cat"></i></div>
+            <div class="channel-info">
+              <span class="channel-label">Guild & Syndicate</span>
+              <span class="channel-val">Ostad Red Team Forge</span>
+            </div>
+          </div>
+
+          <div class="channel-item">
+            <div class="channel-icon"><i class="fa-solid fa-lock"></i></div>
+            <div class="channel-info">
+              <span class="channel-label">Encrypted Key Fingerprint</span>
+              <code class="pgp-code">8F3B 9E21 47CA 108D BD45 77EA 90C1 2F41</code>
+            </div>
+          </div>
+
+          <div class="pgp-box">
+            <div class="pgp-header">
+              <span><i class="fa-solid fa-key"></i> PGP PUBLIC KEY BLOCK</span>
+              <button id="copy-pgp-btn" class="copy-btn" title="Copy PGP Key">COPY</button>
+            </div>
+            <pre id="pgp-text">-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: Ostad Red Team Forge Comms v1.0
+mQENBF+1xPABCADRezaulKarimTop1PercentRedTeamerForgeKey99182370123
+8F3B9E2147CA108DBD4577EA90C12F41AA761E09472198031278912389172389
+=ORKF
+-----END PGP PUBLIC KEY BLOCK-----</pre>
+          </div>
+        </div>
+
+        <!-- Right: Direct Transmission Form -->
+        <div class="contact-form-box tactical-border">
+          <h3 class="channels-title"><i class="fa-solid fa-envelope-open-text text-crimson"></i> DIRECT SECURE DISPATCH</h3>
+          
+          <form id="contact-form" class="cyber-form">
+            <div class="form-group">
+              <label for="sender-name">OPERATIVE / CLIENT NAME:</label>
+              <input type="text" id="sender-name" required placeholder="e.g. John Doe / CISO" />
+            </div>
+
+            <div class="form-group">
+              <label for="sender-email">CONTACT EMAIL:</label>
+              <input type="email" id="sender-email" required placeholder="client@organization.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="mission-type">MISSION SCOPE:</label>
+              <select id="mission-type">
+                <option value="red-team">Adversary Simulation / Red Teaming</option>
+                <option value="pentest">Web / Network Penetration Testing</option>
+                <option value="app-dev">Full-Stack Application Development</option>
+                <option value="it-consult">Enterprise IT & Infrastructure Hardening</option>
+                <option value="forge-join">Join Ostad Red Team Forge</option>
+                <option value="other">Other Inquiries</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">TRANSMISSION CONTENT:</label>
+              <textarea id="message" rows="5" required placeholder="Provide brief operational scope, goals, or requirements..."></textarea>
+            </div>
+
+            <button type="submit" id="submit-btn" class="btn btn-primary btn-full">
+              <i class="fa-solid fa-paper-plane"></i> TRANSMIT ENCRYPTED SIGNAL
+            </button>
+            <div id="form-feedback" class="form-feedback"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-logo"><i class="fa-solid fa-shield-halved text-crimson"></i> OSTAD REZAUL KARIM</span>
+        <p class="footer-tagline">Founder of <strong>Ostad Red Team Forge</strong> | Top 1% Red Teamer</p>
+      </div>
+      <div class="footer-links">
+        <a href="#hero">Command</a>
+        <a href="#about">Dossier</a>
+        <a href="#forge">Forge</a>
+        <a href="curriculum.html">Curriculum</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#terminal">Console</a>
+        <a href="#arsenal">Arsenal</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/abdulmannanshekh/OstadRezaulKarim" target="_blank" rel="noopener noreferrer" title="GitHub Repository">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://ostadrezaulkarim.com" title="Custom Domain">
+          <i class="fa-solid fa-globe"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="disclaimer">
+        <i class="fa-solid fa-triangle-exclamation text-crimson"></i> DISCLAIMER: All penetration testing and adversary emulation activities are strictly performed under written authorization and explicit Rules of Engagement (ROE).
+      </p>
+      <p class="copyright">
+        &copy; 2026 Ostad Rezaul Karim. All Rights Reserved. Ostad Red Team Forge &bull; Domain: <span class="text-crimson">ostadrezaulkarim.com</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

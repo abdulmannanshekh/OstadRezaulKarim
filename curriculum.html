@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Red Team Masterclass Curriculum | Ostad Red Team Forge</title>
+  
+  <meta name="title" content="Red Team Masterclass Curriculum | Ostad Red Team Forge" />
+  <meta name="description" content="বাংলায় প্রথম ও সম্পূর্ণ জিরো থেকে এন্টারপ্রাইজ লেভেল অ্যাডভান্সড অফেন্সিভ সাইবার সিকিউরিটি গাইড। ১৯টি পূর্ণাঙ্গ মডিউল, EDR বাইপাস, ম্যালওয়্যার ডেভেলপমেন্ট, ও অ্যাক্টিভ ডিরেক্টরি ডমিন্যান্স।" />
+  <meta name="author" content="Ostad Rezaul Karim" />
+
+  <link rel="icon" type="image/jpeg" href="assets/ostad_badge.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Orbitron:wght@600;800;900&family=Rajdhani:wght@600;700&family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Hind Siliguri', 'Inter', sans-serif;
+    }
+    .curriculum-hero {
+      padding: 60px 0 40px;
+      text-align: center;
+      position: relative;
+    }
+    .badge-masterclass {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 23, 68, 0.15);
+      border: 1px solid var(--accent-red);
+      color: #ff3366;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 8px 18px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+    .curriculum-title {
+      font-family: var(--font-cyber);
+      font-size: 2.8rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #ffffff;
+      margin-bottom: 12px;
+      text-shadow: 0 0 20px rgba(255, 23, 68, 0.4);
+    }
+    .curriculum-sub {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      max-width: 850px;
+      margin: 0 auto 30px;
+      line-height: 1.7;
+    }
+    .curriculum-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .btn-download {
+      background: linear-gradient(135deg, #00b0ff, #0056b3);
+      color: #fff;
+      box-shadow: 0 0 20px rgba(0, 176, 255, 0.4);
+    }
+    .btn-download:hover {
+      background: linear-gradient(135deg, #33c1ff, #0077ee);
+      box-shadow: 0 0 25px rgba(0, 176, 255, 0.7);
+      transform: translateY(-2px);
+    }
+    .instructor-strip {
+      background: rgba(14, 17, 24, 0.95);
+      border: 1px solid rgba(255, 23, 68, 0.3);
+      border-radius: 8px;
+      padding: 24px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 1050px;
+      margin: 0 auto 50px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    }
+    .instructor-info {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .instructor-avatar {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      border: 2px solid var(--accent-red);
+      overflow: hidden;
+      box-shadow: 0 0 15px var(--accent-glow);
+    }
+    .instructor-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .instructor-text h4 {
+      font-family: var(--font-cyber);
+      font-size: 1.2rem;
+      color: #fff;
+    }
+    .instructor-text p {
+      color: var(--accent-bright);
+      font-size: 0.9rem;
+      font-family: var(--font-mono);
+    }
+    .founder-quote-box {
+      background: rgba(20, 24, 35, 0.85);
+      border-left: 4px solid var(--accent-red);
+      padding: 25px 30px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 45px;
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: #e2e8f0;
+    }
+    .usp-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 50px;
+    }
+    .usp-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      padding: 22px;
+      transition: var(--transition-normal);
+    }
+    .usp-card:hover {
+      border-color: var(--accent-red);
+      box-shadow: 0 0 20px rgba(255, 23, 68, 0.2);
+      transform: translateY(-2px);
+    }
+    .usp-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .usp-title i {
+      color: var(--accent-red);
+    }
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .search-input {
+      background: rgba(14, 17, 24, 0.95);
+      border: 1px solid rgba(255, 23, 68, 0.3);
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      flex-grow: 1;
+      max-width: 450px;
+      outline: none;
+    }
+    .search-input:focus {
+      border-color: var(--accent-red);
+      box-shadow: 0 0 12px rgba(255, 23, 68, 0.3);
+    }
+    .modules-accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+    .module-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: var(--transition-normal);
+    }
+    .module-item:hover {
+      border-color: var(--border-active);
+    }
+    .module-header {
+      padding: 18px 24px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      user-select: none;
+      background: rgba(18, 21, 30, 0.6);
+    }
+    .module-header:hover {
+      background: rgba(255, 23, 68, 0.08);
+    }
+    .module-num {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent-bright);
+      background: rgba(255, 23, 68, 0.15);
+      border: 1px solid rgba(255, 23, 68, 0.3);
+      padding: 4px 10px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .module-title-text {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      flex-grow: 1;
+    }
+    .module-toggle-icon {
+      color: var(--accent-red);
+      transition: transform 0.3s ease;
+      font-size: 1rem;
+    }
+    .module-item.open .module-toggle-icon {
+      transform: rotate(180deg);
+    }
+    .module-content {
+      padding: 0 24px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+    .module-item.open .module-content {
+      padding: 20px 24px;
+      max-height: 800px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .module-bullets {
+      list-style: none;
+      margin-bottom: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .module-bullets li {
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.6;
+    }
+    .module-bullets i {
+      color: var(--accent-red);
+      font-size: 0.85rem;
+      margin-top: 5px;
+    }
+    .module-outcome {
+      background: rgba(0, 255, 136, 0.06);
+      border: 1px solid rgba(0, 255, 136, 0.25);
+      border-radius: 6px;
+      padding: 12px 16px;
+      font-size: 0.92rem;
+      color: #bbf7d0;
+      line-height: 1.6;
+    }
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-bottom: 50px;
+    }
+    .cert-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      padding: 22px;
+      text-align: center;
+    }
+    .cert-badge-name {
+      font-family: var(--font-cyber);
+      font-size: 1.25rem;
+      color: #ff3366;
+      margin-bottom: 8px;
+    }
+    .cert-org {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--text-dim);
+      margin-bottom: 12px;
+    }
+    .cert-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    @media (max-width: 768px) {
+      .curriculum-title {
+        font-size: 1.9rem;
+      }
+      .instructor-strip {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body class="cyber-theme">
+  <canvas id="cyber-canvas"></canvas>
+  <div class="scanlines"></div>
+  <div class="vignette"></div>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-status-bar">
+    <div class="status-left">
+      <span class="live-dot pulse-red"></span>
+      <span class="status-label">MASTERCLASS:</span>
+      <span class="status-val glow-red">OFFICIAL 2026 EDITION</span>
+      <span class="separator">|</span>
+      <span class="status-label">FORGE:</span>
+      <span class="status-val">OSTAD RED TEAM FORGE</span>
+    </div>
+    <div class="status-right">
+      <a href="index.html" style="color:var(--text-muted); text-decoration:none;"><i class="fa-solid fa-arrow-left"></i> BACK TO HOME</a>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-icon"><i class="fa-solid fa-shield-halved"></i></span>
+        <div class="brand-text">
+          <span class="primary-brand">OSTAD REZAUL KARIM</span>
+          <span class="sub-brand">RED TEAM FORGE</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html#hero" class="nav-link"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="index.html#about" class="nav-link"><i class="fa-solid fa-user-secret"></i> Dossier</a>
+        <a href="#curriculum" class="nav-link active"><i class="fa-solid fa-book-skull"></i> Curriculum</a>
+        <a href="#certifications" class="nav-link"><i class="fa-solid fa-certificate"></i> Certifications</a>
+        <a href="index.html#contact" class="nav-link nav-cta"><i class="fa-solid fa-paper-plane"></i> Enroll / Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="curriculum-hero">
+      <div class="badge-masterclass">
+        <i class="fa-solid fa-skull"></i> OSTAD RED TEAM FORGE &bull; MASTERCLASS 2026
+      </div>
+
+      <h1 class="curriculum-title">RED TEAM MASTERCLASS</h1>
+      <p class="curriculum-sub">
+        বাংলায় প্রথম ও সম্পূর্ণ জিরো থেকে এন্টারপ্রাইজ লেভেল অ্যাডভান্সড অফেন্সিভ সাইবার সিকিউরিটি গাইড।
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="curriculum-actions">
+        <a href="assets/Ostad_Red_Team_Forge_Masterclass_Curriculum.docx" download class="btn btn-download">
+          <i class="fa-solid fa-file-word"></i> DOWNLOAD OFFICIAL DOCX FILE
+        </a>
+        <a href="#curriculum" class="btn btn-primary">
+          <i class="fa-solid fa-layer-group"></i> ১৯টি মডিউল ব্রাউজ করুন
+        </a>
+        <a href="index.html#contact" class="btn btn-secondary">
+          <i class="fa-solid fa-user-shield"></i> কোর্সে জয়েন করুন
+        </a>
+      </div>
+
+      <!-- Instructor Strip -->
+      <div class="instructor-strip">
+        <div class="instructor-info">
+          <div class="instructor-avatar">
+            <img src="assets/ostad_badge.jpg" alt="Ostad Rezaul Karim" />
+          </div>
+          <div class="instructor-text">
+            <h4>OSTAD REZAUL KARIM</h4>
+            <p>Founder & Director, Ostad Red Team Forge &bull; Top 1% Red Teamer</p>
+          </div>
+        </div>
+        <div class="instructor-badges">
+          <span class="pill-red">Cybersecurity Expert</span>
+          <span class="pill">Ethical Hacker</span>
+          <span class="pill">App & Web Dev</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUNDER'S VISION -->
+    <section class="section-container" style="padding-top: 0;">
+      <div class="section-header">
+        <span class="section-tag">[ FOUNDER'S_VISION ]</span>
+        <h2 class="section-title">প্রতিষ্ঠাতা ও পরিচালকের বার্তা</h2>
+        <div class="section-divider"><span class="divider-diamond"></span></div>
+      </div>
+
+      <div class="founder-quote-box">
+        <i class="fa-solid fa-quote-left text-crimson" style="font-size: 1.4rem; margin-right: 8px;"></i>
+        "বাংলাদেশে দীর্ঘদিন ধরে সাইবার সিকিউরিটির নামে শুধু কিছু পাবলিক টুলস (যেমন Nmap বা Metasploit) চালানো শেখানো হয়েছে। কিন্তু বাস্তব কর্পোরেট জগতে প্রবেশ করলে যেখানে Sophos, CrowdStrike, SentinelOne বা Defender for Endpoint এর মতো অত্যাধুনিক EDR এবং ব্লু টিম বসে আছে, সেখানে পাবলিক স্ক্রিপ্ট এক সেকেন্ডও বাঁচে না! আমার উদ্দেশ্য ছিল এমন একটি আন্তর্জাতিক মানের মাস্টারক্লাস তৈরি করা, যা একজন সম্পূর্ণ জিরো-লেভেল শিক্ষার্থীকেও নিজস্ব শেলকোড রানার তৈরি, ডাইরেক্ট সিসকল দিয়ে EDR বাইপাস, অ্যাক্টিভ ডিরেক্টরি ডমিন্যান্স এবং ক্লাউড টেকওভারের শীর্ষ ১% দক্ষতায় নিয়ে যাবে।"
+      </div>
+
+      <!-- 5 USPs -->
+      <div class="section-header" style="margin-bottom: 30px;">
+        <span class="section-tag">[ COURSE_EXCELLENCE ]</span>
+        <h3 style="font-family: var(--font-cyber); font-size: 1.5rem; color: #fff;">এই কোর্সের ৫টি অদ্বিতীয় বিশেষত্ব</h3>
+      </div>
+
+      <div class="usp-grid">
+        <div class="usp-card">
+          <div class="usp-title"><i class="fa-solid fa-language"></i> ১০০% জিরো-লেভেল ফ্রেন্ডলি</div>
+          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
+            প্রোগ্রামিং বা নেটওয়ার্কিং জানা না থাকলেও সমস্যা নেই। প্রতিটি ইংরেজি শব্দের সহজ বাংলা উচ্চারণ (যেমন: Adversary = অ্যাড-ভার-সা-রি) এবং পুঙ্খানুপুঙ্খ অর্থ সহ ব্যাখ্যা।
+          </p>
+        </div>
+
+        <div class="usp-card">
+          <div class="usp-title"><i class="fa-solid fa-code"></i> লাইন-বাই-লাইন কোড ডিসেকশন</div>
+          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
+            কোনো তৈরি করা টুল নয়; C, Python, PowerShell, x64 Assembly এর প্রতিটি কোড লাইনে বাংলায় কমেন্ট করে বুঝানো হয়েছে কীভাবে উইন্ডোজ মেমোরিতে সরাসরি কার্নেলের সাথে কথা বলতে হয়।
+          </p>
+        </div>
+
+        <div class="usp-card">
+          <div class="usp-title"><i class="fa-solid fa-shield-virus"></i> আধুনিক ডিফেন্স এভেশন (EDR/XDR)</div>
+          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
+            AMSI প্যাচিং, ETW নিউট্রালাইজেশন, Hell's Gate / Halo's Gate দিয়ে Direct Syscalls, এবং Ekko স্লিপ অবফাসকেশন—যা সাধারণত হাই-এন্ড পেইড ইন্টারন্যাশনাল কোর্সেও থাকে না।
+          </p>
+        </div>
+
+        <div class="usp-card">
+          <div class="usp-title"><i class="fa-solid fa-network-wired"></i> এন্ড-টু-এন্ড এন্টারপ্রাইজ অ্যাটাক চেইন</div>
+          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
+            ফিজিক্যাল অফিস অনুপ্রবেশ ও লকপিকিং থেকে শুরু করে সোশ্যাল ইঞ্জিনিয়ারিং, অন-প্রিমিসেস অ্যাক্টিভ ডিরেক্টরি টেকওভার, হাইব্রিড Azure Entra ID ক্লাউড হাইজ্যাক এবং কাস্টম C2 ডেভেলপমেন্ট।
+          </p>
+        </div>
+
+        <div class="usp-card">
+          <div class="usp-title"><i class="fa-solid fa-award"></i> আন্তর্জাতিক সার্টিফিকেশন ও ক্যারিয়ার</div>
+          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
+            CRTO (Certified Red Team Operator), CRTE, OSCP, OSEP এবং গ্লোবাল এন্টারপ্রাইজ স্ট্যান্ডার্ডের এক্সিকিউটিভ রিপোর্ট রাইটিং ও MITRE ATT&CK ম্যাপিং প্রস্তুতি।
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULES ACCORDION -->
+    <section id="curriculum" class="section-container">
+      <div class="section-header">
+        <span class="section-tag">[ 19_MODULES_SYLLABUS ]</span>
+        <h2 class="section-title">সম্পূর্ণ কোর্স কারিকুলাম ও মডিউল রিভিউ</h2>
+        <div class="section-divider"><span class="divider-diamond"></span></div>
+        <p class="section-subtitle">
+          প্রতিটি মডিউলের বিস্তারিত টপিক এবং আউটকাম দেখতে ক্লিক করুন।
+        </p>
+      </div>
+
+      <div class="filter-bar">
+        <input type="text" id="module-search" class="search-input" placeholder="মডিউল বা টপিক সার্চ করুন (যেমন: Active Directory, EDR, Malware)..." />
+        <button id="toggle-all-btn" class="btn btn-secondary" style="padding: 10px 18px; font-size: 0.85rem;">
+          <i class="fa-solid fa-angles-down"></i> সব মডিউল খুলুন
+        </button>
+      </div>
+
+      <div class="modules-accordion" id="modules-container">
+        
+        <!-- Module 1 -->
+        <div class="module-item open">
+          <div class="module-header">
+            <span class="module-num">মডিউল ০১</span>
+            <span class="module-title-text">রেড টিমিং জিরো টু হিরো (Red Teaming Foundations)</span>
+            <i class="fa-solid fa-chevron-down module-toggle-icon"></i>
+          </div>
+          <div class="module-content">
+            <ul class="module-bullets">
+              <li><i class="fa-solid fa-angle-right"></i> রেড টিম বনাম পেনটেস্টিং বনাম ব্লু টিমের মৌলিক পার্থক্য ও কার্যপ্রণালী।</li>
+              <li><i class="fa-solid fa-angle-right"></i> Rules of Engagement (RoE) এবং লিগ্যাল সেফটি ডক তৈরিকরণ।</li>
+              <li><i class="fa-solid fa-angle-right"></i> উইন্ডোজ ইন্টারনালস: User Mode বনাম Kernel Mode, Process, Thread, Virtual Memory।</li>
+              <li><i class="fa-solid fa-angle-right"></i> কমান্ড লাইন মাস্টারি: CMD, PowerShell, ও অ্যাডভান্সড ডোমেইন কোয়েরি।</li>
+              <li><i class="fa-solid fa-angle-right"></i> নিজস্ব পিসিতে মাল্টি-মেশিন ভলনারেবল Active Directory এন্টারপ্রাইজ ল্যাব সেটআপ।</li>
+            </ul>
+            <div class="module-outcome">
+              <strong>🎯 এই মডিউল শেষে শিক্ষার্থী যা যা শিখবে / প্রয়োগ করতে পারবে:</strong> শিক্ষার্থী রেড টিমের প্রাতিষ্ঠানিক আইনগত ফ্রেমওয়ার্ক বুঝতে পারবে, উইন্ডোজ ওএস এর অভ্যন্তরীণ মেমোরি ইন্টারনালস আয়ত্ত করবে এবং যেকোনো এন্টারপ্রাইজ ল্যাব পুরোপুরি নিজে ডিজাইন করতে পারবে।
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="module-item">
+          <div class="module-header">
+            <span class="module-num">মডিউল ০২</span>
+            <span class="module-title-text">ইনিশিয়াল অ্যাক্সেস ও পেলোড ডেভেলপমেন্ট (Initial Access & Payloads)</span>
+            <i class="fa-solid fa-chevron-down module-toggle-icon"></i>
+          </div>
+          <div class="module-content">
+            <ul class="module-bullets">
+              <li><i class="fa-solid fa-angle-right"></i> PE ফাইল ফরম্যাট (MZ Header, Section Headers: .text, .data, .rdata, Import Table)।</li>
+              <li><i class="fa-solid fa-angle-right"></i> প্রসেস মেমোরি আর্কিটেকচার: Stack বনাম Heap এর কার্যপদ্ধতি।</li>
+              <li><i class="fa-solid fa-angle-right"></i> Shellcode কী? কীভাবে মেশিন কোড কোনো ওএস ছাড়া সরাসরি এক্সিকিউট হয়।</li>
+              <li><i class="fa-solid fa-angle-right"></i> উইন্ডোজ Win32 API হ্যান্ডলিং: VirtualAlloc, VirtualProtect, CreateThread, RtlMoveMemory।</li>
+              <li><i class="fa-solid fa-angle-right"></i> সি (C) ল্যাঙ্গুয়েজে নিজস্ব কাস্টম Shellcode Runner কোডিং ও জিসিসি কম্পাইলেশন।</li>
+            </ul>
+            <div class="module-outcome">
+              <strong>🎯 এই মডিউল শেষে শিক্ষার্থী যা যা শিখবে / প্রয়োগ করতে পারবে:</strong> শিক্ষার্থী সি ল্যাঙ্গুয়েজে সম্পূর্ণ নিজস্ব স্ক্র্যাচ কোড লিখে আনডিটেক্টেড শেলকোড রানার বানাতে পারবে এবং মেমোরিতে কোড এক্সিকিউট করার গভীর কৌশল অর্জন করবে।
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="module-item">
+          <div class="module-header">
+            <span class="module-num">মডিউল ০৩</span>
+            <span class="module-title-text">ডিফেন্স এভেশন ১০১ (Defense Evasion & EDR Bypassing)</span>
+            <i class="fa-solid fa-chevron-down module-toggle-icon"></i>
+          </div>
+          <div class="module-content">
+            <ul class="module-bullets">
+              <li><i class="fa-solid fa-angle-right"></i> AV/EDR মেকানিজম: Static Signature, Heuristics, Dynamic Sandbox এবং মেমোরি স্ক্যানার।</li>
+              <li><i class="fa-solid fa-angle-right"></i> পেলোড এনক্রিপশন: Python দিয়ে XOR এবং ইন্ডাস্ট্রি গ্রেড AES-256 CBC এনক্রিপশন।</li>
+              <li><i class="fa-solid fa-angle-right"></i> উইন্ডোজ BCrypt API ব্যবহার করে মেমোরিতে রানটাইম ডিক্রিপশন ইঞ্জিন।</li>
+              <li><i class="fa-solid fa-angle-right"></i> AMSI (Antimalware Scan Interface) মেমোরি প্যাচিং (AmsiScanBuffer হুকিং)।</li>
+              <li><i class="fa-solid fa-angle-right"></i> ETW (Event Tracing for Windows) নিউট্রালাইজেশন এবং Ekko স্লিপ অবফাসকেশন।</li>
+            </ul>
+            <div class="module-outcome">
+              <strong>🎯 এই মডিউল শেষে শিক্ষার্থী যা যা শিখবে / প্রয়োগ করতে পারবে:</strong> ডিফেন্ডার বা যেকোনো আধুনিক অ্যান্টিভাইরাসের চোখ ফাঁকি দিয়ে এনক্রিপ্টেড পেলোড রানটাইমে ডিক্রিপ্ট করা এবং AMSI/ETW অন্ধ করে ক্ষতিকর স্ক্রিপ্ট চালানোর পূর্ণ দক্ষতা অর্জিত হবে।
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="module-item">
+          <div class="module-header">
+            <span class="module-num">মডিউল ০৪</span>
+            <span class="module-title-text">অ্যাক্টিভ ডিরেক্টরি রিকনেসাঁ ও অ্যাটাক (Active Directory Recon)</span>
+            <i class="fa-solid fa-chevron-down module-toggle-icon"></i>
+          </div>
+          <div class="module-content">
+            <ul class="module-bullets">
+              <li><i class="fa-solid fa-angle-right"></i> এন্টারপ্রাইজ AD আর্কিটেকচার: Domain, Forest, Tree, OU, Trust, ও GPO মেকানিক্স।</li>
+              <li><i class="fa-solid fa-angle-right"></i> Kerberos অথেনটিকেশন ফ্লো: KDC, AS-REQ, TGT, TGS-REQ, ও Service Principal Name (SPN)।</li>
+              <li><i class="fa-solid fa-angle-right"></i> রক্তচক্ষু BloodHound ও SharpHound সেটআপ এবং গ্রাফ থিওরি দিয়ে শর্টেস্ট পাথ অ্যানালাইসিস।</li>
+              <li><i class="fa-solid fa-angle-right"></i> Kerberoasting অ্যাটাক (PowerView, Rubeus, Impacket) ও সার্ভিস অ্যাকাউন্ট হ্যাশ চুরি।</li>
+              <li><i class="fa-solid fa-angle-right"></i> AS-REP Roasting (প্রি-অথেনটিকেশন অফ অ্যাকাউন্ট) ও Hashcat GPU ক্র্যাকিং (-m 13100, -m 18200)।</li>
+            </ul>
+            <div class="module-outcome">
+              <strong>🎯 এই মডিউল শেষে শিক্ষার্থী যা যা শিখবে / প্রয়োগ করতে পারবে:</strong> যেকোনো কর্পোরেট উইন্ডোজ নেটওয়ার্কে ঢুকে কোনো অ্যালার্ট না তুলে সম্পূর্ণ ডোমেইন ম্যাপ করা এবং কারবারোস টিকিট চুরি করে অ্যাডমিন পাসওয়ার্ড বের করার ক্ষমতা অর্জন করবে।
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 5 -->
+        <div class="module-item">
+          <div class="module-header">
+            <span class="module-num">মডিউল ০৫</span>
+            <span class="module-title-text">ল্যাটেরাল মুভমেন্ট ও ক্রেডেনশিয়াল অ্যাটাক (Lateral Movement & Credentials)</span>
+            <i class="fa-solid fa-chevron-down module-toggle-icon"></i>
+          </div>
+          <div class="module-content">
+            <ul class="module-bullets">
+              <li><i class="fa-solid fa-angle-right"></i> উইন্ডোজে পাসওয়ার্ড সংরক্ষণের জায়গা: LSASS, SAM ডেটাবেস, NTDS.dit।</li>
+              <li><i class="fa-solid fa-angle-right"></i> Mimikatz ইন-ডেপথ: privilege::debug, sekurlsa::logonpasswords, lsadump::dcsync।</li>
+              <li><i class="fa-solid fa-angle-right"></i> AV বাইপাস করে অফলাইন LSASS ডাম্প (comsvcs.dll + pypykatz অফলাইন পার্সিং)।</li>
+              <li><i class="fa-solid fa-angle-right"></i> Pass-the-Hash (PtH), Overpass-the-Hash, এবং Pass-the-Ticket (PtT)।</li>
+              <li><i class="fa-solid fa-angle-right"></i> রিমোট এক্সিকিউশন: WMI, Evil-WinRM, DCOM ও টোকেন ইমপারসোনেশন (PrintSpoofer)।</li>
+            </ul>
+            <div class="module-outcome">
+              <strong>🎯 এই মডিউল শেষে শিক্ষার্থী যা যা শিখবে / প্রয়োগ করতে পারবে:</strong> একটি মাত্র মেশিনে লোকাল অ্যাক্সেস পাওয়ার পর পাসওয়ার্ড না জেনেই হ্যাশ ব্যবহার করে পুরো নেটওয়ার্কের প্রতিটি সার্ভার ও ওয়ার্কস্টেশনে ছড়িয়ে পড়ার সক্ষমতা।
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 6 -->
+        <div class="module-item">
+          <div class="module-header">
+            <span class="module-num">মডিউল ০৬</span>
+            <span class="module-title-text">ডোমেইন ডমিন্যান্স ও পারসিসটেন্স (Domain Dominance)</span>
+            <i class="fa-solid fa-chevron-down module-toggle-icon"></i>
+          </div>
+          <div class="module-content">
+            <ul class="module-bullets">
+              <li><i class="fa-solid fa-angle-right"></i> DCSync অ্যাটাক: ডোমেইন কন্ট্রোলার না হয়েও পুরো ডোমেইনের সিক্রেট ডেটাবেস রেপ্লিকেট করা।</li>
+              <li><i class="fa-solid fa-angle-right"></i> `krbtgt` অ্যাকাউন্ট অ্যাকাউন্ট সিক্রেট এবং গোল্ডেন টিকিট (Golden Ticket - ১০ বছরের আনলিমিটেড অ্যাক্সেস)।</li>
+              <li><i class="fa-solid fa-angle-right"></i> সিলভার টিকিট (Silver Ticket) এবং ডায়মন্ড টিকিট (Diamond Ticket) তৈরি।</li>
+              <li><i class="fa-solid fa-angle-right"></i> Active Directory Certificate Services (AD CS) মিসকনফিগারেশন এক্সপ্লয়টেশন (ESC1, ESC8)।</li>
+              <li><i class="fa-solid fa-angle-right"></i> AdminSDHolder পারসিসটেন্স ব্যাকডোর এবং ম্যালিশিয়াস GPO পুশ।</li>
+            </ul>
+            <div class="module-outcome">
+              <strong>🎯 এই মডিউল শেষে শিক্ষার্থী যা যা শিখবে / প্রয়োগ করতে পারবে:</strong> সম্পূর্ণ উইন্ডোজ ডোমেইন টেকওভার করে এমন ব্যাকডোর স্থাপন যা সিস্টেম অ্যাডমিন পাসওয়ার্ড পরিবর্তন করলেও কখনোই ধ্বংস করা যায় না।
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 7 -->
+        <div class="module-item">
+          <div class="module-header">
+            <span class="module-num">মডিউল ০৭</span>
+            <span class="module-title-text">C2 ইনফ্রাস্ট্রাকচার ও OPSEC (C2 Infrastructure & OPSEC)</span>
+            <i class="fa-solid fa-chevron-down module-toggle-icon"></i>
+          </div>
+          <div class="module-content">
+            <ul class="module-bullets">
+              <li><i class="fa-solid fa-angle-right"></i> কমান্ড অ্যান্ড কন্ট্রোল (C2) আর্কিটেকচার ও টপোলজি ডিজাইন।</li>
+              <li><i class="fa-solid fa-angle-right"></i> Havoc C2 আধুনিক ফ্রেমওয়ার্ক সম্পূর্ণ সেটআপ ও কাস্টমাইজেশন।</li>
+              <li><i class="fa-solid fa-angle-right"></i> Malleable HTTP/HTTPS প্রোফাইল: ট্রাফিককে মাইক্রোসফট উইন্ডোজ আপডেটের ছদ্মবেশ দেওয়া।</li>
+              <li><i class="fa-solid fa-angle-right"></i> Nginx রিডাইরেক্টর, SSL সার্টিফিকেশন এবং Cloudflare Workers প্রক্সি দিয়ে আসল সার্ভার লুকানো।</li>
+              <li><i class="fa-solid fa-angle-right"></i> ৩০+ পয়েন্টের আলটিমেট রেড টিম OPSEC চেকলিস্ট ও LOLBins ব্যবহার।</li>
+            </ul>
+            <div class="module-outcome">
+              <strong>🎯 এই মডিউল শেষে শিক্ষার্থী যা যা শিখবে / প্রয়োগ করতে পারবে:</strong> একটি আন্তর্জাতিক মানের বুলেটপ্রুফ C2 নেটওয়ার্ক তৈরি করতে পারবে যা ব্লু টিমের ফায়ারওয়াল বা থ্রেট হান্টাররা ট্রেস করতে ব্যর্থ হবে।
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 8 -->
+        <div class="module-item">
+          <div class="module-header">
+            <span class="module-num">মডিউল ০৮</span>
+            <span class="module-title-text">ক্লাউড রেড টিমিং — Azure ও Entra ID (Cloud Red Teaming)</span>
+            <i class="fa-solid fa-chevron-down module-toggle-icon"></i>
+          </div>
+          <div class="module-content">
+            <ul class="module-bullets">
+              <li><i class="fa-solid fa-angle-right"></i> আধুনিক হাইব্রিড এনভায়রনমেন্ট ও Microsoft Entra ID (পূর্বের Azure AD) আর্কিটেকচার।</li>
+              <li><i class="fa-solid fa-angle-right"></i> আনঅথেনটিকেটেড টেন্যান্ট ও ইউজার এনিউমারেশন (OpenID, GetUserRealm)।</li>
+              <li><i class="fa-solid fa-angle-right"></i> Azure AD Connect অ্যাটাক: অন-প্রিমিসেস থেকে ক্লাউড গ্লোবাল অ্যাডমিন পাসওয়ার্ড সিনক্রোনাইজেশন চুরি।</li>
+              <li><i class="fa-solid fa-angle-right"></i> Seamless SSO ব্যাকডোর (`AZUREADSSOACC$` হ্যাশ দিয়ে গোল্ডেন ক্লাউড SAML টোকেন তৈরি)।</li>
+              <li><i class="fa-solid fa-angle-right"></i> Microsoft Graph API অ্যাবিউজ, Service Principal এস্কেলেশন, এবং কন্ডিশনাল অ্যাক্সেস (CAP) বাইপাস।</li>
+            </ul>
+            <div class="module-outcome">
+              <strong>🎯 এই মডিউল শেষে শিক্ষার্থী যা যা শিখবে / প্রয়োগ করতে পারবে:</strong> অন-প্রিমিসেস উইন্ডোজ সার্ভার থেকে সরাসরি মাইক্রোসফট ক্লাউড অ্যাজিউর গ্লোবাল অ্যাডমিন অধিকার নিয়ে সমস্ত ক্লাউড ডেটা ও কি-ভল্ট এক্সট্র্যাক্ট করতে পারবে।
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 9 -->
+        <div class="module-item">
+          <div class="module-header">
+            <span class="module-num">মডিউল ০৯</span>
+            <span class="module-title-text">ক্যাপস্টোন প্রজেক্ট ও প্রফেশনাল রিপোর্টিং (Capstone & Reporting)</span>
+            <i class="fa-solid fa-chevron-down module-toggle-icon"></i>
+          </div>
+          <div class="module-content">
+            <ul class="module-bullets">
+              <li><i class="fa-solid fa-angle-right"></i> পূর্ণাঙ্গ রিয়েল-লাইফ সিমুলেশন: 'Operation PHANTOM STORM' (এন্ড-টু-এন্ড অ্যাটাক চেইন)।</li>
+              <li><i class="fa-solid fa-angle-right"></i> MITRE ATT&CK ম্যাপিং এবং ATT&CK Navigator JSON লেয়ার জেনারেশন।</li>
+              <li><i class="fa-solid fa-angle-right"></i> আন্তর্জাতিক ফরচুন ৫০০ ক্লায়েন্ট-রেডি এক্সিকিউটিভ সামারি ও টেকনিক্যাল ফাইন্ডিংস রিপোর্ট।</li>
+              <li><i class="fa-solid fa-angle-right"></i> CVSS v3.1 মেট্রিক্স ক্যালকুলেশন ও ব্লু টিমের জন্য ডিফেন্সিভ SIGMA রুলস তৈরিকরণ।</li>
+              <li><i class="fa-solid fa-angle-right"></i> CRTO/CRTE সার্টিফিকেশন প্রিপারেশন গাইড এবং হাই-স্যালারি রিমোট ক্যারিয়ার রোডম্যাপ।</li>
+            </ul>
+            <div class="module-outcome">
+              <strong>🎯 এই মডিউল শেষে শিক্ষার্থী যা যা শিখবে / প্রয়োগ করতে পারবে:</strong> একজন পূর্ণাঙ্গ পেশাদার রেড টিম কনসালট্যান্ট হিসেবে ক্লায়েন্টের কাছে আন্তর্জাতিক মানের রিপোর্ট উপস্থাপন এবং সি-লেভেল অডিট পরিচালনার যোগ্যতা।
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 10 -->
+        <div class="module-item">
+          <div class="module-header">
+            <span class="module-num">মডিউল ১০</span>
+            <span class="module-title-text">ফিজিক্যাল রেড টিমিং (Physical Red Teaming)</span>
+            <i class="fa-solid fa-chevron-down module-toggle-icon"></i>
+          </div>
+          <div class="module-content">
+            <ul class="module-bullets">
+              <li><i class="fa-solid fa-angle-right"></i> ফিজিক্যাল অনুপ্রবেশের নিয়মাবলী, RoE ও 'Get Out of Jail Free' কার্ড মেথডোলজি।</li>
+              <li><i class="fa-solid fa-angle-right"></i> Google Maps/Satellite, LinkedIn ও ওপেন সোর্স দিয়ে বিল্ডিংয়ের নকশা ও ক্যামেরা ম্যাপ তৈরি।</li>
+              <li><i class="fa-solid fa-angle-right"></i> লকপিকিং মেকানিক্স: Pin Tumbler তালা, Tension Wrench, Single Pin Picking ও Raking।</li>
+              <li><i class="fa-solid fa-angle-right"></i> বাইপাস টুলস: Shims, Under-Door Tools, Loiding (Credit Card Attack) ও Bump Keys।</li>
+              <li><i class="fa-solid fa-angle-right"></i> RFID/NFC ক্লোনিং (Proxmark3 ও Flipper Zero) এবং রোগ ডিভাইস স্থাপন (LAN Turtle, Rubber Ducky)।</li>
+            </ul>
+            <div class="module-outcome">
+              <strong>🎯 এই মডিউল শেষে শিক্ষার্থী যা যা শিখবে / প্রয়োগ করতে পারবে:</strong> শারীরিকভাবে যেকোনো সিকিউর অফিস বা ডাটা সেন্টারে তালা ও ইলেকট্রনিক ব্যাজ বাইপাস করে ঢুকে হার্ডওয়্যার ব্যাকডোর স্থাপন করার হ্যান্ডস-অন টেকনিক।
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 11 -->
+        <div class="module-item">
+          <div class="module-header">
+            <span class="module-num">মডিউল ১১</span>
+            <span class="module-title-text">সোশ্যাল ইঞ্জিনিয়ারিং মাস্টারি (Social Engineering Mastery)</span>
+            <i class="fa-solid fa-chevron-down module-toggle-icon"></i>
+          </div>
+          <div class="module-content">
+            <ul class="module-bullets">
+              <li><i class="fa-solid fa-angle-right"></i> মানুষের মনস্তাত্ত্বিক দুর্বলতা ও চালডিনির ৬টি প্রভাবের মূলনীতি (Authority, Urgency, Reciprocity)।</li>
+              <li><i class="fa-solid fa-angle-right"></i> GoPhish ফ্রেমওয়ার্ক দিয়ে কর্পোরেট লেভেল ফিশিং সিমুলেশন ও SPAM ফিল্টার বাইপাস (SPF/DKIM/DMARC)।</li>
+              <li><i class="fa-solid fa-angle-right"></i> টার্গেটেড স্পিয়ার ফিশিং ও এক্সিকিউটিভ হোয়েলিং (Whaling / Business Email Compromise - BEC)।</li>
+              <li><i class="fa-solid fa-angle-right"></i> ভিশিং (Vishing): কলার আইডি স্পুফিং এবং ElevenLabs AI দিয়ে সিইওর ভয়েস ক্লোনিং।</li>
+              <li><i class="fa-solid fa-angle-right"></i> স্মিশিং (Smishing) এবং Evilginx2 রিভার্স প্রক্সি দিয়ে টু-ফ্যাক্টর অথেনটিকেশন (2FA/MFA) সেশন কুকি চুরি।</li>
+            </ul>
+            <div class="module-outcome">
+              <strong>🎯 এই মডিউল শেষে শিক্ষার্থী যা যা শিখবে / প্রয়োগ করতে পারবে:</strong> পেশাদার সোশ্যাল ইঞ্জিনিয়ার হিসেবে প্রতিষ্ঠানের সবচেয়ে দুর্বল লিংক অর্থাৎ 'মানুষকে' নৈতিকভাবে পরীক্ষা করে কোনো ক্রেডেনশিয়াল বা অনুমতি ছাড়াই এক্সেস নেয়ার ক্ষমতা।
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 12 -->
+        <div class="module-item">
+          <div class="module-header">
+            <span class="module-num">মডিউল ১২ (ক-ঙ)</span>
+            <span class="module-title-text">অ্যাডভান্সড ম্যালওয়্যার ডেভেলপমেন্ট (Malware Engineering)</span>
+            <i class="fa-solid fa-chevron-down module-toggle-icon"></i>
+          </div>
+          <div class="module-content">
+            <ul class="module-bullets">
+              <li><i class="fa-solid fa-angle-right"></i> <strong>১২ক:</strong> উইন্ডোজ আর্কিটেকচার রিং স্তর, PE ফাইল স্ট্রাকচার এবং আনডিটেক্টেড কি-লগার ডেভেলপমেন্ট।</li>
+              <li><i class="fa-solid fa-angle-right"></i> <strong>১২খ:</strong> Process Injection, Process Hollowing (svchost.exe ফাঁকা করে পেলোড চালানো), ও Thread Hijacking।</li>
+              <li><i class="fa-solid fa-angle-right"></i> <strong>১২গ:</strong> Direct Syscalls (Hell's Gate / Halo's Gate দিয়ে EDR হুকিং বাইপাস), AES রানটাইম ডিক্রিপশন ও অ্যান্টি-স্যান্ডবক্স।</li>
+              <li><i class="fa-solid fa-angle-right"></i> <strong>১২ঘ:</strong> উইন্ডোজ সার্ভিস ইমপ্ল্যান্ট, DLL হাইজ্যাকিং, WMI পারসিসটেন্স এবং কার্নেল অবজেক্ট ম্যানিপুলেশন (DKOM)।</li>
+              <li><i class="fa-solid fa-angle-right"></i> <strong>১২ঙ:</strong> সম্পূর্ণ নিজস্ব পাইথন ও WinHTTP কাস্টম C2 টিমসার্ভার এবং আল্ট্রা-স্টিলথি DNS ডেটা চ্যানেল কোডিং।</li>
+            </ul>
+            <div class="module-outcome">
+              <strong>🎯 এই মডিউল শেষে শিক্ষার্থী যা যা শিখবে / প্রয়োগ করতে পারবে:</strong> কোনো পাবলিক হ্যাকিং ফ্রেমওয়ার্ক ছাড়াই নিজের হাতে সম্পূর্ণ ফাইললেস, আনডিটেক্টেড ও কার্নেল-লেভেল ম্যালওয়্যার এবং C2 ফ্রেমওয়ার্ক তৈরি করার টপ ১% সক্ষমতা।
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 13 -->
+        <div class="module-item">
+          <div class="module-header">
+            <span class="module-num">মডিউল ১৩</span>
+            <span class="module-title-text">ওয়েব অ্যাপ্লিকেশন রেড টিমিং (Web App Red Teaming)</span>
+            <i class="fa-solid fa-chevron-down module-toggle-icon"></i>
+          </div>
+          <div class="module-content">
+            <ul class="module-bullets">
+              <li><i class="fa-solid fa-angle-right"></i> OWASP Top 10 বাস্তব আক্রমণ: আধুনিক সাবডোমেইন, ডিরেক্টরি ও টেকনোলজি রিকন (ffuf, httpx, Nuclei)।</li>
+              <li><i class="fa-solid fa-angle-right"></i> অ্যাডভান্সড SQLi: Union, Boolean, Time-based ও WAF বাইপাস করে ডেটাবেস থেকে OS Shell অর্জন।</li>
+              <li><i class="fa-solid fa-angle-right"></i> XSS ডিপ-ডাইভ: Reflected, Stored, DOM এবং BeEF ফ্রেমওয়ার্ক দিয়ে ব্রাউজার হাইজ্যাক।</li>
+              <li><i class="fa-solid fa-angle-right"></i> SSRF (Server-Side Request Forgery): AWS/GCP ক্লাউড মেটাডেটা সার্ভিস থেকে IAM ক্রেডেনশিয়াল চুরি।</li>
+              <li><i class="fa-solid fa-angle-right"></i> কমান্ড ইনজেকশন, JWT অথেনটিকেশন বাইপাস, রেস্ট্রিক্টেড ফাইল আপলোড বাইপাস ও Burp Suite Pro মাস্টারি।</li>
+            </ul>
+            <div class="module-outcome">
+              <strong>🎯 এই মডিউল শেষে শিক্ষার্থী যা যা শিখবে / প্রয়োগ করতে পারবে:</strong> ওয়েব অ্যাপ্লিকেশনের গভীর দুর্বলতা বের করে সেখান থেকে ইন্টার্নাল নেটওয়ার্ক ও ক্লাউডে পিভট করার বাস্তব হ্যাকিং মেথডোলজি।
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 14 -->
+        <div class="module-item">
+          <div class="module-header">
+            <span class="module-num">মডিউল ১৪</span>
+            <span class="module-title-text">মোবাইল রেড টিমিং — Android (Mobile Security)</span>
+            <i class="fa-solid fa-chevron-down module-toggle-icon"></i>
+          </div>
+          <div class="module-content">
+            <ul class="module-bullets">
+              <li><i class="fa-solid fa-angle-right"></i> Android আর্কিটেকচার, ART রানটাইম, এবং APK ফাইল ইন্টারনালস।</li>
+              <li><i class="fa-solid fa-angle-right"></i> স্ট্যাটিক অ্যানালাইসিস: JADX ও apktool দিয়ে রিভার্স ইঞ্জিনিয়ারিং ও গোপন API কি এনিউমারেশন।</li>
+              <li><i class="fa-solid fa-angle-right"></i> ডায়নামিক হুকিং: Frida ও Objection দিয়ে রানটাইম মেমোরি ইন্টারসেপশন।</li>
+              <li><i class="fa-solid fa-angle-right"></i> SSL Certificate Pinning বাইপাস এবং রুট ডিটেকশন বাইপাস।</li>
+              <li><i class="fa-solid fa-angle-right"></i> লোকাল ডাটাবেস (SQLite, SharedPreferences) ও ক্লিয়ারটেক্সট ট্রাফিক অ্যানালাইসিস।</li>
+            </ul>
+            <div class="module-outcome">
+              <strong>🎯 এই মডিউল শেষে শিক্ষার্থী যা যা শিখবে / প্রয়োগ করতে পারবে:</strong> মোবাইল ব্যাংকিং ও ফিনটেক Android অ্যাপের সিকিউরিটি অডিট পরিচালনা ও সোর্স কোড রিভার্স করে গোপন দুর্বলতা উন্মোচনের দক্ষতা।
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 15 -->
+        <div class="module-item">
+          <div class="module-header">
+            <span class="module-num">মডিউল ১৫</span>
+            <span class="module-title-text">ওয়্যারলেস নেটওয়ার্ক আক্রমণ (Wireless Network Attacks)</span>
+            <i class="fa-solid fa-chevron-down module-toggle-icon"></i>
+          </div>
+          <div class="module-content">
+            <ul class="module-bullets">
+              <li><i class="fa-solid fa-angle-right"></i> রেডিও ফ্রিকোয়েন্সি ফান্ডামেন্টালস ও মনিটর মোড/প্যাকেট ইনজেকশন সাপোর্টেড হার্ডওয়্যার (Alfa AWUS036ACH)।</li>
+              <li><i class="fa-solid fa-angle-right"></i> WPA2 4-Way Handshake ক্যাপচার, Deauth অ্যাটাক ও Hashcat GPU অ্যাক্সিলারেটেড রুল ক্র্যাকিং।</li>
+              <li><i class="fa-solid fa-angle-right"></i> PMKID ক্লায়েন্টলেস অ্যাটাক: কোনো ইউজার কানেক্ট না থাকলেও রাউটারের পাসওয়ার্ড ক্র্যাক করা।</li>
+              <li><i class="fa-solid fa-angle-right"></i> WPA2 Enterprise আক্রমণ: `hostapd-wpe` দিয়ে কর্পোরেট ডোমেইন ক্রেডেনশিয়াল চুরি।</li>
+              <li><i class="fa-solid fa-angle-right"></i> Software Defined Radio (SDR) দিয়ে ৪৩৩ মেগাহার্টজ IoT ডিভাইস ও ZigBee সিগনাল রিপ্লে।</li>
+            </ul>
+            <div class="module-outcome">
+              <strong>🎯 এই মডিউল শেষে শিক্ষার্থী যা যা শিখবে / প্রয়োগ করতে পারবে:</strong> বাতাসের রেডিও তরঙ্গের মাধ্যমে বহুদূর থেকে কর্পোরেট ওয়াইফাই নেটওয়ার্ক ও IoT স্মার্ট ডিভাইস হ্যাক করার বিশেষজ্ঞ মেথডোলজি।
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 16 -->
+        <div class="module-item">
+          <div class="module-header">
+            <span class="module-num">মডিউল ১৬</span>
+            <span class="module-title-text">এক্সপ্লয়েট ডেভেলপমেন্ট (Binary Exploit Dev)</span>
+            <i class="fa-solid fa-chevron-down module-toggle-icon"></i>
+          </div>
+          <div class="module-content">
+            <ul class="module-bullets">
+              <li><i class="fa-solid fa-angle-right"></i> x86/x64 মেমোরি লেআউট, স্ট্যাক ফ্রেম, EBP/ESP ও EIP/RIP রেজিস্টার নিয়ন্ত্রণ।</li>
+              <li><i class="fa-solid fa-angle-right"></i> ক্লাসিক স্ট্যাক বাফার ওভারফ্লো (Buffer Overflow), অফসেট বের করা ও রিটার্ন অ্যাড্রেস হাইজ্যাক।</li>
+              <li><i class="fa-solid fa-angle-right"></i> NOP Sled ও কাস্টম Shellcode ইনজেকশন মেথডোলজি।</li>
+              <li><i class="fa-solid fa-angle-right"></i> আধুনিক মেমোরি ডিফেন্স বাইপাস: ASLR, DEP/NX, ও Stack Canaries।</li>
+              <li><i class="fa-solid fa-angle-right"></i> Return-Oriented Programming (ROP): ROP Gadget চেইনিং দিয়ে মেমোরি প্রটেকশন বাইপাস করে শেল পাওয়া।</li>
+            </ul>
+            <div class="module-outcome">
+              <strong>🎯 এই মডিউল শেষে শিক্ষার্থী যা যা শিখবে / প্রয়োগ করতে পারবে:</strong> সফটওয়্যারের জিরো-ডে ও মেমোরি করাপশন বাগ কাজে লাগিয়ে নিজস্ব এক্সপ্লয়ট কোড লিখে রিমোট কোড এক্সিকিউশন (RCE) অর্জনের ক্ষমতা।
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 17 -->
+        <div class="module-item">
+          <div class="module-header">
+            <span class="module-num">মডিউল ১৭</span>
+            <span class="module-title-text">হার্ডওয়্যার হ্যাকিং (Hardware Hacking & IoT)</span>
+            <i class="fa-solid fa-chevron-down module-toggle-icon"></i>
+          </div>
+          <div class="module-content">
+            <ul class="module-bullets">
+              <li><i class="fa-solid fa-angle-right"></i> হার্ডওয়্যার অডিট ল্যাব: Multimeter, Logic Analyzer, USB-UART, JTAG, ও CH341A প্রোগ্রামার।</li>
+              <li><i class="fa-solid fa-angle-right"></i> সার্কিট বোর্ডে পিনআউট ট্রেসিং (TX, RX, GND, VCC) ও UART সিরিয়াল কনসোল দিয়ে রুট শেল বের করা।</li>
+              <li><i class="fa-solid fa-angle-right"></i> JTAG ইন্টারফেস ও OpenOCD দিয়ে ডিভাইসের লাইভ মেমোরি ডিবাগিং।</li>
+              <li><i class="fa-solid fa-angle-right"></i> SPI Flash চিপ থেকে সরাসরি ক্লিপ দিয়ে ফার্মওয়্যার ডাম্প (Chip-off মেথড)।</li>
+              <li><i class="fa-solid fa-angle-right"></i> Binwalk দিয়ে ফার্মওয়্যার ফাইলসিস্টেম এক্সট্র্যাক্ট করে গোপন রুট পাসওয়ার্ড উদ্ধার ও Arduino BadUSB তৈরি।</li>
+            </ul>
+            <div class="module-outcome">
+              <strong>🎯 এই মডিউল শেষে শিক্ষার্থী যা যা শিখবে / প্রয়োগ করতে পারবে:</strong> যেকোনো রাউটার, সিসিটিভি ক্যামেরা বা ইলেকট্রনিক ডিভাইস শারীরিকভাবে খুলে তার ভেতর থেকে অপারেটিং সিস্টেম চুরি ও ব্যাকডোর করার এলিট জ্ঞান।
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 18 -->
+        <div class="module-item">
+          <div class="module-header">
+            <span class="module-num">মডিউল ১৮</span>
+            <span class="module-title-text">OSINT ও থ্রেট ইন্টেলিজেন্স (OSINT & Threat Intel)</span>
+            <i class="fa-solid fa-chevron-down module-toggle-icon"></i>
+          </div>
+          <div class="module-content">
+            <ul class="module-bullets">
+              <li><i class="fa-solid fa-angle-right"></i> ওপেন সোর্স ইন্টেলিজেন্স মেথডোলজি: ব্যক্তি ও সংস্থার নিখুঁত ডিজিটাল ফুটপ্রিন্ট তৈরি।</li>
+              <li><i class="fa-solid fa-angle-right"></i> পিপল রিকন: Sherlock, Maigret, ExifTool (ছবির গোপন GPS কো-অর্ডিনেট) ও রিভার্স ইমেজ অ্যানালাইসিস।</li>
+              <li><i class="fa-solid fa-angle-right"></i> এন্টারপ্রাইজ ফুটপ্রিন্ট: Certificate Transparency (crt.sh), Shodan ও Censys দিয়ে উন্মুক্ত সার্ভার খোঁজা।</li>
+              <li><i class="fa-solid fa-angle-right"></i> GitHub Dorking ও অটোমেটেড স্ক্রিপ্ট দিয়ে পাবলিক কোডবেস থেকে লিক হওয়া পাসওয়ার্ড উদ্ধার।</li>
+              <li><i class="fa-solid fa-angle-right"></i> Maltego ভিজুয়াল লিংক অ্যানালাইসিস এবং সম্পূর্ণ অটোমেটেড পাইথন OSINT ফ্রেমওয়ার্ক ডেভেলপমেন্ট।</li>
+            </ul>
+            <div class="module-outcome">
+              <strong>🎯 এই মডিউল শেষে শিক্ষার্থী যা যা শিখবে / প্রয়োগ করতে পারবে:</strong> কোনো সংস্থাকে স্পর্শ না করেই ইন্টারনেটের সর্বজনীন ডেটা ব্যবহার করে তাদের সম্পূর্ণ গোপন অবকাঠামোর নকশা বের করার থ্রেট ইন্টেলিজেন্স দক্ষতা।
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 19 -->
+        <div class="module-item">
+          <div class="module-header">
+            <span class="module-num">মডিউল ১৯</span>
+            <span class="module-title-text">কন্টেইনার ও কুবার্নেটিস হ্যাকিং (Container & K8s Security)</span>
+            <i class="fa-solid fa-chevron-down module-toggle-icon"></i>
+          </div>
+          <div class="module-content">
+            <ul class="module-bullets">
+              <li><i class="fa-solid fa-angle-right"></i> Docker আর্কিটেকচার, Namespaces, cgroups ও কন্টেইনার আইসোলেশন সীমাবদ্ধতা।</li>
+              <li><i class="fa-solid fa-angle-right"></i> ডকার এস্কেপ: Docker Socket মাউন্ট অপব্যবহার করে সরাসরি হোস্ট ওএস-এর রুট হওয়া।</li>
+              <li><i class="fa-solid fa-angle-right"></i> Privileged কন্টেইনার এস্কেপ (cgroup notify_on_release) এবং runc দুর্বলতা (CVE-2019-5736)।</li>
+              <li><i class="fa-solid fa-angle-right"></i> Kubernetes ক্লাস্টার রিকন, Service Account JWT টোকেন চুরি ও ম্যালিশিয়াস Pod ক্রিয়েশন।</li>
+              <li><i class="fa-solid fa-angle-right"></i> K8s `etcd` ডাটাবেস থেকে সব সিক্রেট ডাম্প এবং ভুল RBAC দিয়ে সম্পূর্ণ ক্লাস্টার টেকওভার।</li>
+            </ul>
+            <div class="module-outcome">
+              <strong>🎯 এই মডিউল শেষে শিক্ষার্থী যা যা শিখবে / প্রয়োগ করতে পারবে:</strong> আধুনিক ডেভঅপ্স, ক্লাউড ডকার কন্টেইনার এবং কুবার্নেটিস ক্লাস্টারের সীমানা ভেঙে সম্পূর্ণ সার্ভার ইনফ্রাস্ট্রাকচারের কর্তৃত্ব নেওয়ার দক্ষতা।
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS MAPPING -->
+    <section id="certifications" class="section-container" style="background: rgba(10, 13, 20, 0.6);">
+      <div class="section-header">
+        <span class="section-tag">[ GLOBAL_CREDENTIALS ]</span>
+        <h2 class="section-title">গ্লোবাল সার্টিফিকেশন ম্যাপিং</h2>
+        <div class="section-divider"><span class="divider-diamond"></span></div>
+        <p class="section-subtitle">
+          এই মাস্টারক্লাসটি সফলভাবে সম্পন্ন করলে আন্তর্জাতিকভাবে স্বীকৃত শীর্ষস্থানীয় অফেন্সিভ সার্টিফিকেশন এক্সামের জন্য প্রস্তুতি নিশ্চিত হয়।
+        </p>
+      </div>
+
+      <div class="certs-grid">
+        <div class="cert-box">
+          <div class="cert-badge-name">CRTO</div>
+          <div class="cert-org">Zero-Point Security</div>
+          <p class="cert-desc">Certified Red Team Operator — Active Directory, C2 ইনফ্রাস্ট্রাকচার, ল্যাটেরাল মুভমেন্ট ও ডিফেন্স এভেশন সরাসরি কভার করা হয়েছে।</p>
+        </div>
+
+        <div class="cert-box">
+          <div class="cert-badge-name">CRTE</div>
+          <div class="cert-org">Altered Security</div>
+          <p class="cert-desc">Certified Red Team Expert — এন্টারপ্রাইজ মাল্টিপল ডোমেইন ফরেস্ট ট্রাস্ট অ্যাটাক, Kerberos টিকিট অ্যাবিউজ ও AD CS এক্সপ্লয়টেশন।</p>
+        </div>
+
+        <div class="cert-box">
+          <div class="cert-badge-name">OSCP / OSEP</div>
+          <div class="cert-org">Offensive Security</div>
+          <p class="cert-desc">Offensive Security Certified Expert — কাস্টম পেলোড ডেভেলপমেন্ট, প্রসেস ইনজেকশন, উইন্ডোজ এভেশন এবং অ্যাডভান্সড ল্যাটেরাল মুভমেন্ট।</p>
+        </div>
+
+        <div class="cert-box">
+          <div class="cert-badge-name">PACES / eWPTX</div>
+          <div class="cert-org">INE Security</div>
+          <p class="cert-desc">ডোমেইন ডমিন্যান্স, ওয়েব অ্যাপ্লিকেশন এন্টারপ্রাইজ চেইনিং ও হাইব্রিড নেটওয়ার্ক পিভটিং মাস্টারি।</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENROLLMENT CTA -->
+    <section class="section-container" style="text-align: center; border-bottom: none;">
+      <div class="badge-masterclass">
+        <i class="fa-solid fa-graduation-cap"></i> FORGE YOUR OFFENSIVE SECURITY CAREER
+      </div>
+      <h2 style="font-family: var(--font-cyber); font-size: 2.2rem; color: #fff; margin-bottom: 16px;">
+        আপনি কি রেড টিম অপারেটর হিসেবে নিজেকে তৈরি করতে প্রস্তুত?
+      </h2>
+      <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto 30px; font-size: 1.1rem;">
+        আন্তর্জাতিক রিমোট জব (গড় বার্ষিক $120k - $180k) ও টপ ১% সাইবার অফেন্সিভ জগতে প্রবেশ করতে এখনই যোগাযোগ করুন।
+      </p>
+      <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+        <a href="index.html#contact" class="btn btn-primary">
+          <i class="fa-solid fa-paper-plane"></i> ইনকোয়ারি / অ্যাডমিশন মেসেজ দিন
+        </a>
+        <a href="assets/Ostad_Red_Team_Forge_Masterclass_Curriculum.docx" download class="btn btn-download">
+          <i class="fa-solid fa-download"></i> কারিকুলাম DOCX ডাউনলোড করুন
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-logo"><i class="fa-solid fa-shield-halved text-crimson"></i> OSTAD REZAUL KARIM</span>
+        <p class="footer-tagline">Founder of <strong>Ostad Red Team Forge</strong> | Top 1% Red Teamer</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#hero">Home</a>
+        <a href="index.html#about">Dossier</a>
+        <a href="index.html#forge">Forge</a>
+        <a href="#curriculum">Curriculum</a>
+        <a href="index.html#terminal">Console</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="copyright">
+        &copy; 2026 Ostad Rezaul Karim. All Rights Reserved. Ostad Red Team Forge &bull; Domain: <span class="text-crimson">ostadrezaulkarim.com</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Accordion Logic
+    document.querySelectorAll('.module-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        item.classList.toggle('open');
+      });
+    });
+
+    // Toggle All Button
+    const toggleAllBtn = document.getElementById('toggle-all-btn');
+    let allOpen = false;
+    if (toggleAllBtn) {
+      toggleAllBtn.addEventListener('click', () => {
+        allOpen = !allOpen;
+        document.querySelectorAll('.module-item').forEach(item => {
+          if (allOpen) {
+            item.classList.add('open');
+          } else {
+            item.classList.remove('open');
+          }
+        });
+        toggleAllBtn.innerHTML = allOpen 
+          ? '<i class="fa-solid fa-angles-up"></i> সব মডিউল বন্ধ করুন' 
+          : '<i class="fa-solid fa-angles-down"></i> সব মডিউল খুলুন';
+      });
+    }
+
+    // Search filter
+    const searchInput = document.getElementById('module-search');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        document.querySelectorAll('.module-item').forEach(item => {
+          const text = item.textContent.toLowerCase();
+          if (text.includes(query)) {
+            item.style.display = 'block';
+            if (query.length > 2) item.classList.add('open');
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    }
+  </script>
+</body>
+</html>
